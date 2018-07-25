@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\Contact.cshtml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PhotoListing.DataAccess\PhotoListing.DataAccess.csproj" />
+    <ProjectReference Include="..\PhotoListing.Services\PhotoListing.Services.csproj" />
+  </ItemGroup>
+</Project>
